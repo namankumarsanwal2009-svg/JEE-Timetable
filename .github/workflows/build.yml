@@ -24,6 +24,7 @@ jobs:
 
       - name: Download Gradle wrapper jar
         run: |
+          mkdir -p JEETimetable/gradle/wrapper
           curl -L "https://github.com/gradle/gradle/raw/v8.4.0/gradle/wrapper/gradle-wrapper.jar" -o JEETimetable/gradle/wrapper/gradle-wrapper.jar
           chmod +x JEETimetable/gradlew
 
