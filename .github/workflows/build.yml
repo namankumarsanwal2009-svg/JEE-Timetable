@@ -26,10 +26,11 @@ jobs:
         run: |
           mkdir -p JEETimetable/gradle/wrapper
           curl -L "https://github.com/gradle/gradle/raw/v8.4.0/gradle/wrapper/gradle-wrapper.jar" -o JEETimetable/gradle/wrapper/gradle-wrapper.jar
-          chmod +x JEETimetable/gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --stacktrace
         working-directory: JEETimetable
 
       - name: Upload APK artifact
